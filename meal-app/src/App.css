@@ -10,7 +10,7 @@ html {
     font-size:100%;
 } /*16px*/
 
-root {
+:root {
     /*colors */
     --primary-100:#e6f0ff;
     --primary-200:#b4d3fe;
@@ -170,11 +170,14 @@ ul {
 /* Search */
 /* Favorites */
 /* Meals */
-.section-center {
+.section, .section-center {
     padding: 3rem 0;
     width:var(--view-width);
     max-width:var(--max-width);
     margin:0 auto;
+}
+
+.section-center {
     display:grid;
     gap:2rem;
 }
@@ -194,12 +197,45 @@ ul {
 .single-meal {
     background:var(--white);
     color:var(--textColor);
-    border-radius: var(--borderRadius);
-    box-shadow: var(--shadow-2);
+    border-radius:var(--borderRadius);
+    box-shadow:var(--shadow-2);
     transition:var(--transition);
 }
 
 .single-meal:hover {
     box-shadow: (--shadow-4);
+}
+
+.single-meal img {
+    height:15rem;
+    border-top-left-radius: var(--borderRadius);
+    border-top-right-radius: var(--borderRadius);
+    cursor:pointer;
+}
+
+.single-meal h5 {
+    padding:0;
+    margin: 0;
+}
+
+.single-meal footer {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+.like-btn {
+    background:transparent;
+    border: transparent;
+    font-size:1.5rem;
+    cursor:pointer;
+    transition:var(--transition);
+}
+
+.like-btn:hover {
+    color:var(--red-dark);
+    transform: translateY(-2px);
 }
 /* Modals */
