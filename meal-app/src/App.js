@@ -12,7 +12,7 @@ export default function App() {
             <Search />
             {/* <Favorites /> */}
             <Meals />
-            {showModal && <Modal /> }
+            {showModal && <Modal />}
         </main>
     )
 }
