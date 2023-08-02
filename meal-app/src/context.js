@@ -12,6 +12,7 @@ const AppProvider = ({children}) => {
     const [searchTerm, setSearchTerm] =useState('')
     const [showModal, setShowModal] = useState(false)
     const [selectedMeal,setSelectedMeal] = useState(null)
+    const [favorites, setFavorites] = useState([])
     
 const fetchMeals = async(url) => {
 
@@ -37,13 +38,32 @@ const fetchRandomMeal = () =>
 
 const selectMeal = (idMeal, favoriteMeal) => {
     let meal;
-    meal=meals.find((meal) => meal.idMeal === idMeal)
+    if (favoriteMeal) {
+        meal = favorites.find((meal) => meal.idMeal === idMeal)
+    }
+    else {
+        meal=meals.find((meal) => meal.idMeal === idMeal)
+    }
+    
     setSelectedMeal(meal)
     setShowModal(true);
 }
 
 const closeModal = () => {
     setShowModal(false)
+}
+
+const addToFavorites = (idMeal) => {
+    const meal = meals.find((meal) =>meal.idMeal === idMeal)
+    const alreadyFavorite = favorites.find((meal)=> meal.idMeal === idMeal)
+    if(alreadyFavorite) return
+    const updatedFavorites = [...favorites, meal];
+    setFavorites(updatedFavorites)
+}
+
+const removeFromFavorites = (idMeal) => {
+    const updatedFavorites = favorites.filter((meal)=>meal.idMeal !== idMeal);
+    setFavorites(updatedFavorites)
 }
 
     useEffect(() => {
@@ -58,7 +78,7 @@ useEffect(() => {
         //
     },[searchTerm])
 
-    return <AppContext.Provider value ={{loading, meals, setSearchTerm, fetchRandomMeal, showModal, selectMeal, selectedMeal, closeModal}}>
+    return <AppContext.Provider value ={{loading, meals, setSearchTerm, fetchRandomMeal, showModal, selectMeal, selectedMeal, closeModal, addToFavorites, removeFromFavorites, favorites}}>
         {children}
     </AppContext.Provider>
 
