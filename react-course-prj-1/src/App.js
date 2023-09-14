@@ -1,25 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import logo from './logo.svg';
+
+function Header() {
+    return (
+    <header>
+        <nav>
+            <img src={logo} width="100px" />
+        </nav>
+    </header>
+    )
+}
+
+function MainContent() {
+    return(
+    <>
+    <h1>
+        My list
+    </h1>
+    <ul>
+        <li>Sick</li>
+        <li>Awesome</li>
+        <li>Cool</li>
+    </ul>
+    </>
+    )
+}
+
+function Footer() {
+    return(
+        <footer>
+            "copyright. Thomas Gonzales development. All rights reserved."
+        </footer>
+    )
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Header />
+            <MainContent />
+            <Footer />
+        </>
+    )
 }
 
 export default App;
