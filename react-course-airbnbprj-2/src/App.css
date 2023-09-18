@@ -39,3 +39,26 @@ section {
 .hero--text {
     margin-top: 0;
 }
+
+.card {
+    width: 175px;
+    font-size: 12px;
+}
+
+.card--img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card--stats {
+    display:flex;
+    align-items: center;
+}
+
+.card--star {
+    width: 14px;
+}
+
+.gray {
+    color: #918E9B;
+}
