@@ -1,10 +1,10 @@
-import RyanGoslingLogo from '../images/ryan-gosling.jpg'
-import RedStarLogo from '../images/red-star.png'
+import RedStarLogo from '../public/images/red-star.png'
+import Data from './data'
 
 export default function Card() {
     return (
         <div className="card">
-            <img src={RyanGoslingLogo} className="card--img" />
+            <img src={} className="card--img" />
             <div className="card--stats">
                 <img src={RedStarLogo} className="card--star" />
                 <span>5.0</span> 

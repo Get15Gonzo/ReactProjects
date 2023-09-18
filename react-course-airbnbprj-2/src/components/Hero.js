@@ -1,4 +1,4 @@
-import collage from '../images/collage.png'
+import collage from './collage.png'
 
 export default function Hero() {
     return (
