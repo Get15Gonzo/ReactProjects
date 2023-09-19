@@ -74,4 +74,5 @@ nav {
 .container {
     margin: 0 15px;
     padding-right: 30px;
+    align-self: center;
 }
