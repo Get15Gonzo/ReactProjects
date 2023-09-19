@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 5px 5px
+}
+
+.nav--img {
+    width: 20px;
+    margin: 6px;
+}
+
+.nav--title {
+    color: white;
+}
