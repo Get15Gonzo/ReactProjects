@@ -60,4 +60,20 @@ main {
     max-width: 100%;
 }
 
+.meme {
+    position: relative;
+    flex-wrap: wrap`;
+}
 
+.meme--text {
+    position: absolute;
+    align-content: center;
+}
+
+.top {
+    font-size: 100px;
+}
+
+.bottom {
+    align-self: bottom;
+}
