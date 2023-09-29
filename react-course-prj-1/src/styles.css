@@ -5,19 +5,19 @@
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
-    background-color: #282D35;
+    background-color: white;
 }
 
 
 nav {
     display:flex;
     align-items: center;
-    background-color: #21222A;
+    background-color: white;
     height: 90px;
     padding:30px 25px;
 }
 
-.nav--logo_text, nav--title {
+.nav--logo_text {
     margin: 0;
 }
 
@@ -27,18 +27,13 @@ nav {
     font-size: 22px;
 }
 
-.nav--title {
-    color:#DEEBF8;
-    font-weight: 600;
-}
-
 .nav--icon {
     height:30px;
 }
 
 main {
     padding: 57px 27px;
-    color: white;
+    color: black;
 }
 
 .main--title {
@@ -60,6 +55,10 @@ main {
 
 .main--facts > li::marker {
     font-size: 1.4rem;
-    color:#61DAFB
+    color:#61DAFB;
+}
+
+.toggler {
+    display: flex;
 }
 
